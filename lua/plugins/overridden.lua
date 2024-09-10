@@ -63,7 +63,8 @@ return {
             { function() require("telescope").extensions.notify.notify() end, desc = "Find notifications" }
           end
           maps.n["<Leader>fo"] = { function() require("telescope.builtin").oldfiles() end, desc = "Find history" }
-          maps.n["<Leader>fr"] = { function() require("telescope.builtin").registers() end, desc = "Find registers" }
+          -- maps.n["<Leader>fr"] = { function() require("telescope.builtin").registers() end, desc = "Find registers" }
+          maps.n["<Leader>fr"] = { function() require("telescope.builtin").resume() end, desc = "Resume previous search" }
           maps.n["<Leader>ft"] = {
             function() require("telescope.builtin").colorscheme { enable_preview = true, ignore_builtins = true } end,
             desc = "Find themes",
